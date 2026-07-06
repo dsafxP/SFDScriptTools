@@ -7,7 +7,6 @@
 Script collection for Superfighters Deluxe development
 
 [![GitHub License](https://img.shields.io/github/license/dsafxP/SFD.ScriptTools)](LICENSE)
-[![GitHub Release](https://img.shields.io/github/v/release/dsafxP/SFD.ScriptTools)](https://github.com/dsafxP/SFD.ScriptTools/releases)
 
 </div>
 
