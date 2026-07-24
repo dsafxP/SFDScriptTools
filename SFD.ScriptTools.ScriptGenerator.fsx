@@ -21,7 +21,7 @@ let wrapperClassName = "__SFDScriptGeneratorFormattingWrapper__"
 // Argument parsing
 
 let printUsage () =
-    printfn "Usage: SFD.ScriptTools.SFDScriptGenerator.fsx <file1.cs> [file2.cs ...] [-o|--output <path>] [-h|--help]"
+    printfn "Usage: SFD.ScriptTools.ScriptGenerator.fsx <file1.cs> [file2.cs ...] [-o|--output <path>] [-h|--help]"
     printfn ""
     printfn "  <file.cs>...  One or more C# source files to weld together"
     printfn "  -o, --output  Path to write the resulting welded .csx file to (required)"

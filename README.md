@@ -23,7 +23,7 @@ The linked/copied file is also automatically added to `.gitignore` (creating the
 The script also keeps the SDK version in sync: it reads the DLL's product version and checks it against a `<RequiredGameSdkVersion>` field in the nearest `.csproj`. If the field is missing it is added with the current version; if the value does not match the installed DLL the script exits with an error so you can install the required SDK or update the project manually.
 
 ```sh
-Usage: SFD.ScriptTools.SFDLibrarySetup.fsx [-f|--file <path-to-dll>] [-o|--output <output-path>] [--dry-run] [-h|--help]
+Usage: SFD.ScriptTools.LibrarySetup.fsx [-f|--file <path-to-dll>] [-o|--output <output-path>] [--dry-run] [-h|--help]
 
   -f, --file    Explicit path to SFD.GameScriptInterface.dll (skips auto-search)
   -o, --output  Output path for the symlink/copy (default: ./lib/SFD.GameScriptInterface.dll)
@@ -40,7 +40,7 @@ For each input file, everything outside of the `GameScript` class (using directi
 The remaining bodies are concatenated (each preceded by a comment noting its source file) and whitespace-normalized via Roslyn's Formatter before being written to disk.
 
 ```sh
-Usage: SFD.ScriptTools.SFDScriptGenerator.fsx <file1.cs> [file2.cs ...] [-o|--output <path>] [-h|--help]
+Usage: SFD.ScriptTools.ScriptGenerator.fsx <file1.cs> [file2.cs ...] [-o|--output <path>] [-h|--help]
 
   <file.cs>...  One or more C# source files to weld together
   -o, --output  Path to write the resulting welded .csx file to (required)

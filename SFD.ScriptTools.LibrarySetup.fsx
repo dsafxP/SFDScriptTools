@@ -31,7 +31,7 @@ let defaultSearchPaths: string list =
 // Argument parsing
 
 let printUsage () =
-    printfn "Usage: SFD.ScriptTools.SFDLibrarySetup.fsx [-f|--file <path>] [-o|--output <path>] [--dry-run] [-h|--help]"
+    printfn "Usage: SFD.ScriptTools.LibrarySetup.fsx [-f|--file <path>] [-o|--output <path>] [--dry-run] [-h|--help]"
     printfn ""
     printfn "  -f, --file    Explicit path to %s (skips auto-search)" DllName
     printfn "  -o, --output  Output path for the symlink/copy (default: %s)" defaultOutputPath
