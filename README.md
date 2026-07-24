@@ -20,11 +20,14 @@ Locates the proprietary `SFD.GameScriptInterface.dll` somewhere on the system (c
 
 The linked/copied file is also automatically added to `.gitignore` (creating the file if needed).
 
+The script also keeps the SDK version in sync: it reads the DLL's product version and checks it against a `<RequiredGameSdkVersion>` field in the nearest `.csproj`. If the field is missing it is added with the current version; if the value does not match the installed DLL the script exits with an error so you can install the required SDK or update the project manually.
+
 ```sh
-Usage: SFDScriptSetup.fsx [-f|--file <path-to-dll>] [-o|--output <output-path>] [-h|--help]
+Usage: SFDScriptSetup.fsx [-f|--file <path-to-dll>] [-o|--output <output-path>] [--dry-run] [-h|--help]
 
   -f, --file    Explicit path to SFD.GameScriptInterface.dll (skips auto-search)
   -o, --output  Output path for the symlink/copy (default: ./lib/SFD.GameScriptInterface.dll)
+      --dry-run Run all checks without touching the filesystem; exit 1 if changes are needed
   -h, --help    Show this help message and exit
 ```
 
